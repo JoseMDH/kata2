@@ -1,0 +1,41 @@
+package software.ulpgc.kata2;
+
+public class Title {
+    private final String title;
+    private final int year;
+    private final int duration;
+    private final String titleType;
+
+    public Title(String title, int year, int duration, String titleType) {
+        this.title = title;
+        this.year = year;
+        this.duration = duration;
+        this.titleType = titleType;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public String getTitleType() {
+        return titleType;
+    }
+
+    @Override
+    public String toString() {
+        return "Title{" +
+                "title='" + title + '\'' +
+                ", year=" + year +
+                ", duration=" + duration +
+                ", titleType='" + titleType + '\'' +
+                '}';
+    }
+}
