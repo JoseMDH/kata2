@@ -1,41 +1,23 @@
 package software.ulpgc.kata2;
 
-public class Title {
-    private final String title;
-    private final int year;
-    private final int duration;
-    private final String titleType;
+import java.util.List;
 
-    public Title(String title, int year, int duration, String titleType) {
-        this.title = title;
-        this.year = year;
-        this.duration = duration;
-        this.titleType = titleType;
-    }
+public record Title(String id, String titleType,
+                    String primaryTitle, String originalTitle,
+                    boolean isAdult, int start_year, int end_year,
+                    int duration, String genres) {
 
-    public String getTitle() {
-        return title;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public String getTitleType() {
-        return titleType;
-    }
-
-    @Override
-    public String toString() {
-        return "Title{" +
-                "title='" + title + '\'' +
-                ", year=" + year +
-                ", duration=" + duration +
-                ", titleType='" + titleType + '\'' +
-                '}';
+    public enum TitleType {
+        VideoGame,
+        TvShort,
+        Movie,
+        TvSeries,
+        TvMiniSeries,
+        TvSpecial,
+        TvMovie,
+        TvEpisode,
+        Video,
+        TvPilot,
+        Short,
     }
 }

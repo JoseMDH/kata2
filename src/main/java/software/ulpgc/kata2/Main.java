@@ -11,7 +11,7 @@ public class Main {
         List<Title> titles = new FileTitleLoader(file, new TsvTitleDeserializer()).load();
         HashMap<String, Integer> stats = new HashMap<>();
         for (Title title : titles) {
-            stats.put(title.getTitleType(), stats.getOrDefault(title.getTitleType(), 0) + 1);
+            stats.put(title.titleType(), stats.getOrDefault(title.titleType(), 0) + 1);
         }
         StatsDisplayer histogramStatsDisplayer = new HistogramStatsDisplayer(new FromMapHistogramElementBuilder(stats));
         histogramStatsDisplayer.displayStats();
